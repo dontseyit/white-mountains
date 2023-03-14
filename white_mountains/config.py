@@ -22,12 +22,12 @@ from .models import SupportedLanguages
 
 
 # Please adapt config prefix and remove unnecessary config bases:
-@config_from_yaml(prefix="my_microservice")
+@config_from_yaml(prefix="white_mountains")
 class Config(ApiConfigBase):
     """Config parameters and their defaults."""
 
-    service_name: str = "my_microservice"  # Please adapt
-    language: SupportedLanguages = "Croatian"
+    service_name: str = "white_mountains"  # Please adapt
+    language: SupportedLanguages = "German"
 
 
 CONFIG = Config()

@@ -1,3 +1,10 @@
-# Please only mention the non-default settings here:
-
-language: Greek
+host: 127.0.0.1
+port: 8080
+log_level: info
+workers: 1
+auto_reload: true
+api_root_path: "/"
+openapi_url: "/openapi.json"
+docs_url: "/docs"
+cors_allow_credentials: true
+cors_allowed_origins: ["*"]
