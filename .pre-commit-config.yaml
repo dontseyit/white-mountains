@@ -23,6 +23,7 @@ repos:
         exclude: devcontainer.json|config_schema.json
       - id: check-merge-conflict
       - id: check-symlinks
+      - id: check-executables-have-shebangs
       - id: check-shebang-scripts-are-executable
       - id: check-docstring-first
       - id: debug-statements
@@ -65,5 +66,3 @@ repos:
     hooks:
       - id: bandit
         exclude: tests|.devcontainer|scripts
-
-#TODO: Add check-executables-have-shebangs back when executable problem solved in Mac
