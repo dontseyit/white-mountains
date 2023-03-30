@@ -1,9 +1,8 @@
 name: Dev CD
 
 on:
-  push:
-    branches:
-      - 'releases/**'
+  release:
+    types: [created]
       # you may add other branches to
       # activate deployment for them, too.
 
