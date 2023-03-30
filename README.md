@@ -3,12 +3,12 @@
 
 # White Mountains
 
-This repo is a sandbox generated from [ghga-de/microservice-repository-templaten](https://github.com/ghga-de/microservice-repository-template)
+This repo is a sandbox generated from [ghga-de/microservice-repository-template](https://github.com/ghga-de/microservice-repository-template)
 
 The directories, files, and their structure herein are recommendations
 from the GHGA Dev Team.
 
-Since there is no stable development on this repo, some features may not work or be experimental.
+Since there is no stable development on this repo, some features may not work or may be experimental.
 
 ## Development
 For setting up the development environment, we rely on the
