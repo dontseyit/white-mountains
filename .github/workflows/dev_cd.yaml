@@ -85,12 +85,12 @@ jobs:
         with:
           push: true
           #       platforms: linux/amd64,linux/arm64/v8
-          tags: "ghga/${{ github.event.repository.name }}:${{ needs.check_semantic_tag_format.outputs.tag_name }},ghga/${{ github.event.repository.name }}:${{ needs.check_semantic_tag_format.outputs.branch }}"
+          tags: "seyit/${{ github.event.repository.name }}:${{ needs.check_semantic_tag_format.outputs.tag_name }},seyit/${{ github.event.repository.name }}:${{ needs.check_semantic_tag_format.outputs.branch }}"
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: "docker.io/ghga/${{ github.event.repository.name }}:${{ needs.check_semantic_tag_format.outputs.tag_name }}"
+          image-ref: "docker.io/seyit/${{ github.event.repository.name }}:${{ needs.check_semantic_tag_format.outputs.tag_name }}"
           format: "table"
           exit-code: "1"
           ignore-unfixed: true

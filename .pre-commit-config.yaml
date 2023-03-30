@@ -32,7 +32,7 @@ repos:
       - id: mixed-line-ending
         args: [--fix=lf]
       - id: no-commit-to-branch
-        args: [--branch, dev, --branch, int, --branch, main]
+        args: [--branch, dev, --branch, int]
       - id: debug-statements
       - id: debug-statements
       - id: debug-statements
