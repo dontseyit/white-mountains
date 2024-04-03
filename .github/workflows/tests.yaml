@@ -1,11 +1,11 @@
-name: Tests
+name: Unit and Integration Tests
 
 on: push
 
 jobs:
-  tests:
+  unit_and_int_tests:
     runs-on: ubuntu-latest
-    name: Tests
+    name: Unit and Integration Tests
 
     steps:
       - uses: actions/checkout@v3
@@ -30,4 +30,5 @@ jobs:
         run: |
           docker exec \
             --workdir /workspace \
+            white-mountains \
             pytest -v
