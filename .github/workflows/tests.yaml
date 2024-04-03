@@ -1,0 +1,33 @@
+name: Tests
+
+on: push
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Tests
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check Docker and Docker Compose versions
+        run: |
+          docker --version
+          docker-compose --version
+
+      - name: Set up containers
+        run: |
+          docker-compose -f .devcontainer/docker-compose.yml up -d
+
+      - name: Install Dependencies
+        run: |
+          docker exec \
+            --workdir /workspace \
+            white-mountains \
+            sudo pip install -r requirements.txt
+
+      - name: Run pytest
+        run: |
+          docker exec \
+            --workdir /workspace \
+            pytest -v
